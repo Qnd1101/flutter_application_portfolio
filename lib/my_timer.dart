@@ -79,7 +79,7 @@ class _MyTimerState extends State<MyTimer> {
               color: Colors.black,
               child: const Center(
                 child: Text(
-                  'my timer',
+                  'This is Kim\'s Timer',
                   style: TextStyle(color: Colors.white, fontSize: 50),
                 ),
               ),
@@ -155,7 +155,9 @@ class _MyTimerState extends State<MyTimer> {
         height: 100,
         decoration: BoxDecoration(shape: BoxShape.circle, color: color),
         child: Center(
-          child: Text('$sec'),
+          child: Text('$sec',
+              style:
+                  const TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
         ),
       ),
     );
