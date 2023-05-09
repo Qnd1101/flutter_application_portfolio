@@ -39,7 +39,7 @@ class _MyDiceState extends State<MyDice> {
         timer.cancel();
         setState(() {
           isStart = false;
-          resultNum = '끝 뿡';
+          resultNum = 'End';
         });
       }
     }
