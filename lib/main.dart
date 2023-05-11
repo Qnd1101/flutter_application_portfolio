@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_portfolio/dice/my_dice.dart';
+import 'package:flutter_application_portfolio/my_home.dart';
+import 'package:flutter_application_portfolio/my_introduce.dart';
 import 'package:flutter_application_portfolio/my_timer.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,10 +22,10 @@ class _MyAppState extends State<MyApp> {
   List<BottomNavigationBarItem> items = [];
   late Widget body_page; // widget body_page <-- 위젯은 빈 공간이면 안됨. ? or late로 해결 가능
   List<dynamic> pages = [
-    const MyTimer(),
+    const MyHome(),
     const MyTimer(),
     const MyDice(),
-    const MyTimer()
+    const MyIntroduce()
   ];
 
   void movePage(int page) {
@@ -57,10 +58,7 @@ class _MyAppState extends State<MyApp> {
 
     // 첫페이지를 지정
     body_page = const Center(
-      child: FaIcon(
-        FontAwesomeIcons.delicious,
-        size: 40,
-      ),
+      child: MyHome(),
     );
   }
 
